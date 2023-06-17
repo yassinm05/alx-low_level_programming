@@ -10,7 +10,7 @@ int main(void)
 {
 	int n;
 srand(time(NULL));
-n = rand() - 9999999999;
+n = rand() - 99999999;
 if (n > 0)
 printf("%d is positive\n", n);
 else if (n < 0)
