@@ -9,10 +9,10 @@ int main(void)
 {
 	char letter = 97;
 
-       	while (letter <= 122)
-       	{
-	       	putchar(letter);
-	       	letter++;
+	while (letter <= 122)
+	{
+		putchar(letter);
+		letter++;
 	}
 
 	letter = 65;
