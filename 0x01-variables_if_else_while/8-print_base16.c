@@ -12,9 +12,9 @@ int main(void)
 	while (letter < 57)
 	{
 		putchar(letter);
-		letter++
+		letter++;
 	}
-	letter = '97';
+	letter = 97;
 
 	while(letter <= 102)
 	{
