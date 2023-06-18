@@ -15,7 +15,7 @@ int main(void)
 		if(letter == 57)
 			break;
 		putchar(44);
-		putchar(" ");
+		putchar(' ');
 		letter++;
 	}
 	putchar('\n');
