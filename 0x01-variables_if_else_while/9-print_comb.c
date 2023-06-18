@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	char letter = 48;
+	int letter = 48;
 
 	while (letter <= 57)
 	{
-		putchar(letter);
+		putchar((char) letter);
 		if(letter == 57)
 			break;
 		putchar(44);
