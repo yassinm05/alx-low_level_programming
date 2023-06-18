@@ -12,7 +12,7 @@ int main(void)
 	while (letter <= 57)
 	{
 		putchar((char) letter);
-		if(letter == 57)
+		if (letter == 57)
 			break;
 		putchar(44);
 		putchar(' ');
