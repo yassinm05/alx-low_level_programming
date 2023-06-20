@@ -5,12 +5,8 @@
  *
  * Return: Always 0 (Success)
  */
-void print()
-{
-	printf("_putchar\n");
-}
 int main(void)
 {
-	print();
+	pritf("_putchar\n");
 	return (0);       
 }
