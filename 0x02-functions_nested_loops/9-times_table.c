@@ -6,7 +6,9 @@
  */
 void times_table()
 {
-	for( int i=0;i<=9;i++)
+	int i=0;
+
+	for(i=0;i<=9;i++)
 	{
 		printf("9 * %d = %d\n",i , i*9);
 	}
