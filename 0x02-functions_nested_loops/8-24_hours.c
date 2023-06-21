@@ -11,7 +11,6 @@ void jack_bauer(void)
 	int second;
 	int third;
 	int fourth;
-	
 	for (first = 0; first <= 2; first++)
 	{
 		for (second = 0; second <= 3; second++)
