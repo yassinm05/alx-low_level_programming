@@ -2,6 +2,8 @@
 /**
  * _isalpha - Entry point
  *
+ *@c : is a parameter 
+ *
  * Return: Always 0 (Success)
  */
 int _isalpha(int c)
@@ -10,6 +12,6 @@ int _isalpha(int c)
 		return (1);
 	if (c >= 97 && c <= 122)
 		return (1);
-	else 
+	else
 		return (0);
 }
