@@ -3,19 +3,17 @@
 /**
  * jack_bauer - Entry point
  *
- * @n :is a parameter
- *
  * Return: Always 0 (Success)
  */
 void jack_bauer(void)
 {
-	int first ;
+	int first;
 	
-	int second ;
+	int second;
 	
-	int third ;
+	int third;
 	
-	int fourth ;
+	int fourth;
 	
 	for (first = 0; first <= 2; first++)
 	{
@@ -25,7 +23,7 @@ void jack_bauer(void)
 			{
 				for (fourth = 0; fourth <= 9; fourth++)
 				{
-					printf("%d%d:%d%d\n",first,second,third,fourth);
+					printf("%d%d:%d%d\n", first, second, third, fourth);
 				}
 			}
 		}
