@@ -21,6 +21,8 @@ void jack_bauer(void)
 				for (fourth = 0; fourth <= 9; fourth++)
 				{
 					printf("%d%d:%d%d\n", first, second, third, fourth);
+					if (first == 2 && second == 3 && third == 5 && fourth == 9)
+						return (0);
 				}
 			}
 		}
