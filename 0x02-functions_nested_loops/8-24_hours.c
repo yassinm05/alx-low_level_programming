@@ -8,11 +8,8 @@
 void jack_bauer(void)
 {
 	int first;
-	
 	int second;
-	
 	int third;
-	
 	int fourth;
 	
 	for (first = 0; first <= 2; first++)
