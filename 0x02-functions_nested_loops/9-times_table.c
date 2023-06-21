@@ -12,8 +12,9 @@ void times_table()
 	for(i = 0; i <= 9; i++)
 	{
 		for (j = 0; j <= 9; j++)
-			 printf("%d, \n",j*i);
+			 printf("%d, ",j*i);
 		if((i*j)<=9)
 			putchar(' ');
+		putchar('\n');
 	}
 }
