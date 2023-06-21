@@ -22,10 +22,10 @@ void jack_bauer(void)
 				{
 					printf("%d%d:%d%d\n", first, second, third, fourth);
 					if (first == 2 && second == 3 && third == 5 && fourth == 9)
-						goto end;
+						goto end_loop;
 				}
 			}
 		}
 	}
-        end:
+end_loop:
 }
