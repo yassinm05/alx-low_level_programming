@@ -16,13 +16,19 @@ void jack_bauer(void)
 	{
 		for (second = 0; second <= 9; second++)
 		{
+			if (first == 2 && second == 3 && third == 5 && fourth == 9)
+				break;
 			for (third = 0; third <= 5; third++)
 			{
+				if (first == 2 && second == 3 && third == 5 && fourth == 9)
+					break;
 				for (fourth = 0; fourth <= 9; fourth++)
+					if (first == 2 && second == 3 && third == 5 && fourth == 9)
+						break;
 				{
 					printf("%d%d:%d%d\n", first, second, third, fourth);
 					if (first == 2 && second == 3 && third == 5 && fourth == 9)
-						return (0);
+						break;
 				}
 			}
 		}
