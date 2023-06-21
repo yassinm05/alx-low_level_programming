@@ -2,7 +2,7 @@
 /**
  * _islower - Entry point
  *
- *c : parameter of the function
+ *@c : parameter of the function
  *
  * Return: Always 0 (Success)
  */
