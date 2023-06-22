@@ -24,5 +24,4 @@ void more_numbers(void)
 			printf("%d", k);
 		}
 	}
-	 _putchar('\n');
 }
