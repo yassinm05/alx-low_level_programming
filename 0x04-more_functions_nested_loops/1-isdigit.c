@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code.
+ * _isdigit - check the code.
  *
  * @c : is a param
  *
