@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * print_diagonal - check the code.
+ *  print_diagonal - check the code.
  *
  * @n : is a param
  *
  * Return: Always 0.
  */
+
 void print_diagonal(int n)
 {
 	int i;
@@ -20,11 +21,11 @@ void print_diagonal(int n)
 	{
 		for (i = 1; i <= n; i++)
 		{
-			_putchar(92);
-			_putchar('\n');
-			for(j = 0; j < i; j++)
+			putchar(92);
+			putchar('\n');
+			for (j = 0; j < i; j++)
 				_putchar(' ');
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 }
