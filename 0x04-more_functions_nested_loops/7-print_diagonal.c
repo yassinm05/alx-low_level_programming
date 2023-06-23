@@ -11,7 +11,7 @@ void print_diagonal(int n)
 {
 	if (n <= 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
 	else
 	{
@@ -20,8 +20,8 @@ void print_diagonal(int n)
 			_putchar(92);
 			_putchar('\n');
 			for(j = 0; j < i; j++)
-				putchar(' ');
+				_putchar(' ');
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
