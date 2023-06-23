@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * mul - check the code.
+ *  print_diagonal - check the code.
  *
  * @n : is a param
  *
