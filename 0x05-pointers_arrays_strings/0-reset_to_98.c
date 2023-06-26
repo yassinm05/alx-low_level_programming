@@ -3,7 +3,7 @@
 /**
  * reset_to_98 - check the code.
  *
- * @*n : is a param
+ * @n : is a param
  *
  * Return: Always 0.
  */
