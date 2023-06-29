@@ -7,6 +7,8 @@
  *
  * @src : is a param
  *
+ *@n : is a param
+ *
  * Return: Always 0.
  */
 char *_strncat(char *dest, char *src, int n)
@@ -20,7 +22,7 @@ char *_strncat(char *dest, char *src, int n)
 		len++;
 		i++;
 	}
-	for (i = len; j <= n; j++)
+	for (i = len; j < n; j++)
 	{
 		dest[i] = src[j];
 		i++;
