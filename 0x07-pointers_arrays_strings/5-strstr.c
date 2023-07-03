@@ -22,8 +22,7 @@ char *_strstr(char *haystack, char *needle)
 		while (needle[j] != '\0')
 		{
 			count = 0;
-			while (haystack[i] != 32 && haystack[i + count] == needle[j]
-					&& needle[j] != '\0')
+			while (haystack[i + count] == needle[j] && needle[j] != '\0')
 			{
 				count++;
 				j++;
