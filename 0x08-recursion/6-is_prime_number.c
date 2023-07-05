@@ -5,9 +5,14 @@
  *
  * @n : is a param
  *
+ *@num : is a param
+ *
+ *@divide : is a param
+ *
  * Return: Always 0.
  */
 
+int prime(int num, int divide);
 int is_prime_number(int n)
 {
 	return (prime(n, n - 1));
