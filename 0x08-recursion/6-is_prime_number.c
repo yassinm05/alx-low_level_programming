@@ -48,4 +48,8 @@ int prime(int num, int divide)
 	{
 		return (1);
 	}
+	else
+	{
+		return (0);
+	}
 }
