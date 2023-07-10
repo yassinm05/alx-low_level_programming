@@ -19,11 +19,11 @@ char *str_concat(char *s1, char *s2)
 	int j;
 	char *s3;
 
-	if (s1 == NUll)
+	if (s1 == 0)
 	{
 		s1 = "\0";
 	}
-	if (s2 == NUll)
+	if (s2 == 0)
 	{
 		s2 = "\0";
 	}
