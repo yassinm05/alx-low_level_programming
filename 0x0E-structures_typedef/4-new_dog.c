@@ -1,15 +1,11 @@
 #include "dog.h"
 #include <stdlib.h>
-
 /**
  * strlength - check the code
- *
  * @str : is a param
- *
  * Return: Always 0.
  */
-
-int strlength(const char *str)
+int strlength(char *str)
 {
 	int len = 0;
 
@@ -19,17 +15,12 @@ int strlength(const char *str)
 	}
 	return (len);
 }
-
 /**
  * *stringcopy - check the code
- *
  * @str1 : is a param
- *
  * @str2 : is a param
- *
  * Return: Always 0.
  */
-
 char *stringcopy(char *str1, char *str2)
 {
 	int i = 0;
@@ -42,19 +33,13 @@ char *stringcopy(char *str1, char *str2)
 	str1[i] = '\0';
 	return (str1);
 }
-
 /**
  * *new_dog - check the code
- *
  * @name : is a param
- *
  * @age : is a param
- *
  * @owner : is a param
- *
  * Return: Always 0.
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog2;
@@ -68,7 +53,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	dog2->name = malloc(sizeof(char) * strlen(name) + 1);
+	dog2->name = malloc(sizeof(char) * (strlen(name) + 1);
 	if ((*dog2)name == NULL)
 	{
 		free(dog2);
