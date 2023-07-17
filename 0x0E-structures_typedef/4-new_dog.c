@@ -80,8 +80,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog2);
 		return (NULL);
 	}
-	dog2->name = stringcopy(dog2->name, name);
+	stringcopy(dog2->name, name);
 	dog2->age = age;
-	dog2->owner = stringcopy(dog2->owner, owner);
+	stringcopy(dog2->owner, owner);
 	return (dog2);
 }
