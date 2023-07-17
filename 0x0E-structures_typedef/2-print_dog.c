@@ -1,4 +1,4 @@
-#include "main.h
+#include "dog.h
 
 /**
  * print_dog - check the code
@@ -12,22 +12,22 @@ void print_dog(struct dog *d)
 {
 	if (d != 0)
 	{
-		if (d->name == NULL)
-		{
-			printf("Name: %s\n", "(nil)");
-		}
-		else
+		if (d->name)
 		{
 			printf("Name: %s\n", d->name);
 		}
-		printf("Age: %f\n", d->age);
-		if (d->owner == NULL)
+		else
 		{
-			printf("Owner: %s\n", "(nil)");
+			printf("Name: %s\n", "(nil)");
+		}
+		printf("Age: %f\n", d->age);
+		if (d->owner)
+		{
+			printf("Owner: %s\n", d->owner);
 		}
 		else
 		{
-			printf("Owner: %s\n", d->owner);
+			printf("Owner: %s\n", "(nil)");
 		}
 	}
 }
