@@ -9,7 +9,7 @@
  * Return: Always 0.
  */
 
-int strlength(char *str)
+int strlength(const char *str)
 {
 	int len = 0;
 
