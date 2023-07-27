@@ -4,9 +4,9 @@
  * add_node - check the code
  *
  * @head : is a param
- * 
+ *
  * @str : is a param
- * 
+ *
  * Return: count.
  */
 
@@ -17,7 +17,7 @@ list_t *add_node(list_t **head, const char *str)
 	char *string;
 
 	newhead = malloc(sizeof(list_t));
-	if(head == NULL || newhead == NULL)
+	if (head == NULL || newhead == NULL)
 	{
 		return (NULL);
 	}
