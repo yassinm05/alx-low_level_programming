@@ -33,7 +33,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (i == index)
 		{
 			prevnode->next = newhead->next;
-			free(node);
+			free(newhead);
 			return (1);
 		}
 		i++;
