@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 	int num = sizeof(n) * 8;
 	int res = 0;
 
-	while (num > 0)
+	while (num)
 	{
 		if (n & 1L << --num)
 		{
@@ -25,7 +25,7 @@ void print_binary(unsigned long int n)
 			putchar('0');
 		}
 	}
-	if (res == 0)
+	if (!res)
 	{
 		putchar('0');
 	}
