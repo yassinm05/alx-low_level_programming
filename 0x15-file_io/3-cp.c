@@ -24,26 +24,44 @@ int main(int ac, char **av)
 	char buf[buff_size];
 
 	if (ac != 3)
-		dprintf(STDERR_FILENO, firsterror), exit(97);
+	{
+		dprintf(STDERR_FILENO, firsterror);
+		exit(97);
+	}
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
-		dprintf(STDERR_FILENO, seconderror, av[1]), exit(98);
+	{
+		dprintf(STDERR_FILENO, seconderror, av[1]);
+		exit(98);
+	}
 	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, permissions);
 	if (fd_to == -1)
-		dprintf(STDERR_FILENO, thirderror, av[2]), exit(99);
+	{
+		dprintf(STDERR_FILENO, thirderror, av[2]);
+		exit(99);
+	}
 	while ((count = read(fd_from, buf, buff_size)) > 0)
 	{
 		if (write(fd_to, buf, count) != count)
-			dprintf(STDERR_FILENO, thirderror, av[2]), exit(99);
+		{
+			dprintf(STDERR_FILENO, thirderror, av[2]);
+		       	exit(99);
+		}
 	}
 	if (count == -1)
-		dprintf(STDERR_FILENO, seconderror, av[1]), exit(98);
-	
-	fd_from = close(fd_from);
-	fd_to = close(fd_to);
-	if (fd_from)
-		dprintf(STDERR_FILENO, fourtherror, fd_from), exit(100);
-	if (fd_to)
-		dprintf(STDERR_FILENO, fourtherror, fd_to), exit(100);
+	{
+		dprintf(STDERR_FILENO, seconderror, av[1]);
+		exit(98);
+	}
+	if (close(fd_from) == -1)
+	{
+		dprintf(STDERR_FILENO, fourtherror, fd_from);
+		exit(100);
+	}
+	if (close(fd_to) == -1)
+	{
+		dprintf(STDERR_FILENO, fourtherror, fd_to);
+		exit(100);
+	}
 	return (1);
 }
