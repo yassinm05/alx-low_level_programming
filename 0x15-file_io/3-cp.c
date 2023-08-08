@@ -1,5 +1,10 @@
 #include "main.h"
 
+#define firsterror "Usage: cp file_from file_to \n"
+#define seconderror "Error: Can't read from file NAME_OF_THE_FILE %s\n"
+#define thirderror "Error: Can't write to NAME_OF_THE_FILE %s\n"
+#define fourtherror "Error: Can't close fd FD_VALUE %d\n"
+
 /**
  * main - check the code
  *
@@ -15,10 +20,6 @@ int main(int ac, char **av)
 	int fd_from = 0, fd_to = 0;
 	ssize_t count = 0;
 	char buf[1024];
-	char *firsterror = "Usage: cp file_from file_to \n";
-	char *seconderror = "Error: Can't read from file NAME_OF_THE_FILE %s\n";
-	char *thirderror = "Error: Can't write to NAME_OF_THE_FILE %s\n";
-	char *fourtherror = "Error: Can't close fd FD_VALUE %d\n";
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, firsterror), exit(97);
@@ -29,8 +30,10 @@ int main(int ac, char **av)
 	if (fd_to == -1)
 		dprintf(STDERR_FILENO, thirderror, av[2]), exit(99);
 	while ((count = read(fd_from, buf, 1024)) > 0)
+	{
 		if (write(fd_to, buf, count) != count)
 			dprintf(STDERR_FILENO, thirderror, av[2]), exit(99);
+	}
 	if (count == -1)
 		dprintf(STDERR_FILENO, seconderror, av[1]), exit(98);
 	if (close(fd_from) == -1)
