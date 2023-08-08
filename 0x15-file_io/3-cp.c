@@ -13,12 +13,12 @@
 int main(int ac, char **av)
 {
 	int fd_from = 0, fd_to = 0;
-	size_t count = 0;
+	ssize_t count = 0;
 	char buf[1024];
-	char *firsterror = "Usage: cp file_from file_to";
-	char *seconderror = "Error: Can't read from file NAME_OF_THE_FILE";
-	char *thirderror = "Error: Can't write to NAME_OF_THE_FILE";
-	char *fourtherror = "Error: Can't close fd FD_VALUE";
+	char *firsterror = "Usage: cp file_from file_to \n";
+	char *seconderror = "Error: Can't read from file NAME_OF_THE_FILE %s\n";
+	char *thirderror = "Error: Can't write to NAME_OF_THE_FILE %s\n";
+	char *fourtherror = "Error: Can't close fd FD_VALUE %d\n";
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, firsterror), exit(97);
