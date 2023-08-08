@@ -38,9 +38,12 @@ int main(int ac, char **av)
 	}
 	if (count == -1)
 		dprintf(STDERR_FILENO, seconderror, av[1]), exit(98);
-	if (close(fd_from) == -1)
+	
+	fd_from = close(fd_from);
+	fd_to = close(fd_to);
+	if (fd_from)
 		dprintf(STDERR_FILENO, fourtherror, fd_from), exit(100);
-	if (close(fd_to) == -1)
+	if (fd_to)
 		dprintf(STDERR_FILENO, fourtherror, fd_to), exit(100);
-	return (EXIT_SUCCESS);
+	return (1);
 }
