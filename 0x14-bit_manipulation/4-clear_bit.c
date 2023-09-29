@@ -5,8 +5,7 @@
  * @n : is a param
  * @index : is a param
  *
- * return : 1 if the bit at the given index was successfully cleared
- * and -1 if there was an error
+ * return: 1 if successfull, -1 on error
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
