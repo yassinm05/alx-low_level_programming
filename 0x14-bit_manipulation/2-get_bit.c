@@ -5,7 +5,8 @@
  *  @n : is a param
  *  @index : is a param
  *
- *  return: the value of the bit at index index or -1 if an error occured
+ *  Return: The value of the bit at the specified index (0 or 1),
+ *     or -1 if an error occurs.
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
