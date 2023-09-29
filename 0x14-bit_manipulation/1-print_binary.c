@@ -10,7 +10,7 @@
 void print_binary(unsigned long int n)
 {
 	int bit = sizeof(n) * 8;
-	inr cout = 0;
+	int cout = 0;
 
 	while (bit)
 	{
