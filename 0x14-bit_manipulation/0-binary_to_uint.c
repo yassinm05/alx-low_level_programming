@@ -4,13 +4,15 @@
  *
  *  @b : is a param
  *
- *  return : the unsigned int after convert b
+ *Return: The converted unsigned integer, or 0 if an error occurs or
+ *the binary string is invalid.
+ *
  */
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result = 0;
 
-	if (!b)
+	if (b == NULL)
 	{
 		return (0);
 	}
