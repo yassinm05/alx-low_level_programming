@@ -12,20 +12,22 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t count = 0;
-	ssize_t len = 0;
+	size_t count = 0;
+	size_t len = 0;
 	int result;
+	char *ptr = text_content;
 
-	while (text_content[len] != '\0')
-	{
-		len++;
-	}
 	if (filename == NULL)
 		return (-1);
+	while (*ptr)
+	{
+		ptr++;
+		len++;
+	}
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 		return (-1);
-	if (len != 0)
+	if (len)
 	{
 		count = write(fd, text_content, len);
 	}
