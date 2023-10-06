@@ -22,6 +22,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	count = read(fd, &limit[0], letters);
 	count = write(STDOUT_FILENO, &limit[0], count);
-	clode(fd);
+	close(fd);
 	return (count);
 }
