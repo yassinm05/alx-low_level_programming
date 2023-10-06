@@ -14,7 +14,6 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	size_t count = 0;
 	size_t len = 0;
-	int result;
 	char *ptr = text_content;
 
 	if (filename == NULL)
@@ -32,5 +31,8 @@ int create_file(const char *filename, char *text_content)
 		count = write(fd, text_content, len);
 	}
 	close(fd);
-	return (cout == len ? 1 : -1);
+	if (count == len)
+		return (1);
+	else
+		return (-1);
 }
