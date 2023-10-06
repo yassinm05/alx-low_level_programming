@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * _strlen - check the code.
+ *
+ * @s : is a param
+ *
+ * Return: Always 0.
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+/**
  * append_text_to_file - check the code
  *
  * @filename : is a param
@@ -13,16 +32,10 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
 	ssize_t count = 0;
-	ssize_t len = 0;
-	char *ptr = text_content;
+	ssize_t len =  _strlen(text_content);
 
 	if (!filename)
 		return (-1);
-	while (*ptr)
-	{
-		len++;
-		ptr++;
-	}
 	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 		return (-1);
