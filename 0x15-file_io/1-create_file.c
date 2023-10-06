@@ -32,9 +32,5 @@ int create_file(const char *filename, char *text_content)
 		count = write(fd, text_content, len);
 	}
 	close(fd);
-	if (count == len)
-		result = 1;
-	else
-		result = -1;
-	return (result);
+	return (cout == len ? 1 : -1);
 }
