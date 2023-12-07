@@ -1,4 +1,4 @@
-#include "lsists.h"
+#include "lists.h"
 /**
  * sum_dlistint - prints all the elements of a dlistint_t list.
  * @head : is a param
